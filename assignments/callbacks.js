@@ -9,7 +9,7 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
   function firstItem(arr, cb) {
     // firstItem passes the first item of the given array to the callback function.
   }
-
+ 
   // Potential Solution:
 
   // Higher order function using "cb" as the call back
@@ -36,6 +36,7 @@ function last(arr, cb) {
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
 }
+function hof(num1,num2)
 
 function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
