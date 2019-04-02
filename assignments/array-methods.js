@@ -68,7 +68,6 @@ let fullName = runners.forEach(function(i){
 // result
 let allCaps = runners.map(function(currentvalue){
     return currentvalue.first_name.toUpperCase();
-
 });
 console.log(allCaps); 
 
@@ -99,11 +98,11 @@ console.log(ticketPriceTotal);
 
 // Problem 1
 // Create an array with name of company
-let companynames = runners.forEach(function(i){
-    console.log(i.company_name);
-
+let companynames = runners.map(function(i){
+    return i.company_name;
 });
 
+console.log(companynames)
 
 // Problem 2
 // Create an new array  getting all the lastname in lowercase
