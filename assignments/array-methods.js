@@ -56,14 +56,11 @@ const runners = [{"id":1,"first_name":"Charmain","last_name":"Seiler","email":"c
 // ==== Challenge 1: Use .forEach() ====
 // The event director needs both the first and last names of each runner for their running bibs. 
 //  Combine both the first and last names into a new array called fullName. 
-let fullName = runners.forEach(function(currentvalue){
-    console.log(currentvalue.first_name + currentvalue.last_name)
+let fullName = runners.forEach(function(i){
+    console.log(i.first_name + i.last_name)
 
 });
-    
-
-
-console.log(fullName);
+ 
 
 // ==== Challenge 2: Use .map() ====
 // The event director needs to have all the runner's first names converted to uppercase because
@@ -90,16 +87,39 @@ console.log(largeShirts);
 // ==== Challenge 4: Use .reduce() ====
 // The donations need to be tallied up and reported for tax purposes. 
 // Add up all the donations into a ticketPriceTotal array and log the result
-// let ticketPriceTotal = runners.reduce(function(accumulator,currentvalue){
-//     return accumulator+currentvalue.donation;
-// },0);
-// console.log(ticketPriceTotal);
+let ticketPriceTotal = runners.reduce(function(accumulator,currentvalue){
+    return accumulator+currentvalue.donation;
+},0);
+console.log(ticketPriceTotal);
 
 // ==== Challenge 5: Be Creative ====
-// Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
+// Now that you have used .forEach(), .map(), .filter(), and .reduce(). 
+//  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  
+// Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
 // Problem 1
+// Create an array with name of company
+let companynames = runners.forEach(function(i){
+    console.log(i.company_name);
+
+});
+
 
 // Problem 2
+// Create an new array  getting all the lastname in lowercase
 
+let lastnames = runners.map(function(i){
+    return i.last_name.toLowerCase();
+});
+console.log(lastnames);
 // Problem 3
+
+// Total number  of "s" size shirt
+
+let smallsize = runners.filter(function(i ){
+    return i.shirt_size === "S"
+});
+console.log(smallsize.length);
+
+
+
