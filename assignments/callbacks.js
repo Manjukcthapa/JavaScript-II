@@ -61,9 +61,9 @@ sumNums(5, 10,function(sum){
 
 function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
-    cb(x * y);
-  
+   return cb(x * y);
 }
+
 multiplyNums(4, 6,function(multiple){
   console.log(multiple)
 })
@@ -76,8 +76,8 @@ function contains(item, list, cb) {
   return cb(check)
 }
 
-contains('Pencil', items, function(kukur){
-  console.log(kukur);
+contains('Pencil', items, function(bool){
+  console.log(bool);
 })
 
 /* STRETCH PROBLEM */
